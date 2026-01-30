@@ -21,9 +21,11 @@ const legalLinks = [
   { href: "/accessibility", label: "Accessibility" },
 ]
 
+const SHOW_PARTNERS = false
+
 const partners = [
   "ID Quantique",
-  "IonQ", 
+  "IonQ",
   "Dell",
   "Cisco",
   "H3C",
@@ -46,7 +48,9 @@ export default function Footer() {
     <footer className="bg-[#0B1F33] text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
@@ -100,8 +104,24 @@ export default function Footer() {
             </ul>
           </div>
 
+
           {/* Partners */}
-          <div>
+          {SHOW_PARTNERS && (
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+                Partners
+              </h4>
+              <ul className="space-y-3">
+                {partners.map((partner) => (
+                  <li key={partner} className="text-[#9CA3AF] text-sm">
+                    {partner}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* <div>
             <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">Partners</h4>
             <ul className="space-y-3">
               {partners.map((partner) => (
@@ -110,7 +130,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Newsletter */}
           <div>
