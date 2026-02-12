@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import ApproachTimeline from "@/components/approach-timeline"
 import AcceptanceCriteria from "@/components/acceptance-criteria"
-import PartnerStrip from "@/components/partner-strip"
+
 import FinalCTA from "@/components/final-cta"
 
 export const metadata: Metadata = {
@@ -61,8 +61,7 @@ export default function ApproachPage() {
       {/* Acceptance Criteria */}
       <AcceptanceCriteria />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
 
       {/* Final CTA */}
       <FinalCTA />

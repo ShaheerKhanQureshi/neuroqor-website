@@ -41,41 +41,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center group">
             <div className={cn(
-              "transition-all duration-300",
-              scrolled ? "w-9 h-9" : "w-11 h-11"
+              "transition-all duration-300 flex-shrink-0",
+              scrolled ? "w-12 h-12" : "w-14 h-14"
             )}>
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                {/* Shield outline */}
-                <path
-                  d="M24 4L40 10V22C40 32 32 40 24 44C16 40 8 32 8 22V10L24 4Z"
-                  stroke="#1FB6C1"
-                  strokeWidth="2"
-                  fill="none"
-                />
-                {/* Brain/neural network nodes */}
-                <circle cx="24" cy="18" r="2" fill="#1FB6C1" />
-                <circle cx="18" cy="24" r="1.5" fill="#1FB6C1" />
-                <circle cx="30" cy="24" r="1.5" fill="#1FB6C1" />
-                <circle cx="20" cy="30" r="1.5" fill="#1FB6C1" />
-                <circle cx="28" cy="30" r="1.5" fill="#1FB6C1" />
-                <circle cx="24" cy="36" r="1.5" fill="#1FB6C1" />
-                {/* Connections */}
-                <line x1="24" y1="18" x2="18" y2="24" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-                <line x1="24" y1="18" x2="30" y2="24" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-                <line x1="18" y1="24" x2="20" y2="30" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-                <line x1="30" y1="24" x2="28" y2="30" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-                <line x1="20" y1="30" x2="24" y2="36" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-                <line x1="28" y1="30" x2="24" y2="36" stroke="#1FB6C1" strokeWidth="1" opacity="0.6" />
-              </svg>
+              <img 
+                src="/neuroqor-logo.svg" 
+                alt="NeuroQor" 
+                className="w-full h-full object-contain"
+              />
             </div>
-            <span className={cn(
-              "font-semibold tracking-tight transition-all duration-300",
-              scrolled ? "text-lg text-[#0B1F33]" : "text-xl text-[#0B1F33]"
-            )}>
-              NeuroQor
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

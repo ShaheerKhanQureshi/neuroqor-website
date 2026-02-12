@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import AboutContent from "@/components/about-content"
-import PartnerStrip from "@/components/partner-strip"
+
 import FinalCTA from "@/components/final-cta"
 
 export const metadata: Metadata = {
@@ -57,8 +57,7 @@ export default function AboutPage() {
       {/* About Content */}
       <AboutContent />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
 
       {/* Final CTA */}
       <FinalCTA />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import InsightsContent from "@/components/insights-content"
-import PartnerStrip from "@/components/partner-strip"
+
 
 export const metadata: Metadata = {
   title: "NeuroQor Insights - Thought Leadership on AI, Quantum and Security",
@@ -56,8 +56,7 @@ export default function InsightsPage() {
       {/* Insights Content */}
       <InsightsContent />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
     </>
   )
 }

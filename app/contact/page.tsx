@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import ContactForm from "@/components/contact-form"
-import PartnerStrip from "@/components/partner-strip"
+
 
 export const metadata: Metadata = {
   title: "Contact NeuroQor - Talk to an Architect",
@@ -38,8 +38,7 @@ export default function ContactPage() {
       {/* Contact Form Section */}
       <ContactForm />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
     </>
   )
 }

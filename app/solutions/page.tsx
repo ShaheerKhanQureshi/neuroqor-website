@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import SolutionsContent from "@/components/solutions-content"
-import PartnerStrip from "@/components/partner-strip"
+
 import FinalCTA from "@/components/final-cta"
 
 export const metadata: Metadata = {
@@ -88,8 +88,7 @@ export default function SolutionsPage() {
       {/* Solutions Content */}
       <SolutionsContent />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
 
       {/* Final CTA */}
       <FinalCTA />

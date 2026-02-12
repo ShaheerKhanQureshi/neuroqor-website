@@ -4,7 +4,7 @@ import TwoPillars from "@/components/two-pillars"
 import SovereignSection from "@/components/sovereign-section"
 import ObservabilitySection from "@/components/observability-section"
 import CyberFusionSection from "@/components/cyber-fusion-section"
-import PartnerStrip from "@/components/partner-strip"
+
 import FinalCTA from "@/components/final-cta"
 import HeroAnimationWrapper from "@/components/hero-animation-wrapper"
 
@@ -76,8 +76,7 @@ export default function HomePage() {
       {/* Cyber Fusion Center */}
       <CyberFusionSection />
 
-      {/* Partner Strip */}
-      <PartnerStrip />
+
 
       {/* Final CTA */}
       <FinalCTA />

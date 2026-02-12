@@ -54,41 +54,11 @@ export default function LoadingScreen() {
       <div className={`flex flex-col items-center gap-6 ${fadeOut ? 'scale-95' : 'scale-100'} transition-transform duration-600`}>
         {/* Logo Animation */}
         <div className="logo-container">
-          <svg 
-            viewBox="0 0 80 80" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="w-20 h-20 md:w-24 md:h-24"
-          >
-            {/* Shield outline - draws in */}
-            <path
-              d="M40 8L64 18V36C64 52 52 64 40 72C28 64 16 52 16 36V18L40 8Z"
-              stroke="#1FB6C1"
-              strokeWidth="2"
-              fill="none"
-              className="shield-path"
-            />
-            
-            {/* Neural network nodes - fade in with stagger */}
-            <g className="neural-nodes">
-              <circle cx="40" cy="28" r="3" fill="#1FB6C1" className="node node-1" />
-              <circle cx="30" cy="38" r="2.5" fill="#1FB6C1" className="node node-2" />
-              <circle cx="50" cy="38" r="2.5" fill="#1FB6C1" className="node node-3" />
-              <circle cx="33" cy="50" r="2.5" fill="#1FB6C1" className="node node-4" />
-              <circle cx="47" cy="50" r="2.5" fill="#1FB6C1" className="node node-5" />
-              <circle cx="40" cy="60" r="2" fill="#1FB6C1" className="node node-6" />
-            </g>
-            
-            {/* Connections - draw after nodes */}
-            <g className="connections">
-              <line x1="40" y1="28" x2="30" y2="38" stroke="#1FB6C1" strokeWidth="1" className="connection connection-1" />
-              <line x1="40" y1="28" x2="50" y2="38" stroke="#1FB6C1" strokeWidth="1" className="connection connection-2" />
-              <line x1="30" y1="38" x2="33" y2="50" stroke="#1FB6C1" strokeWidth="1" className="connection connection-3" />
-              <line x1="50" y1="38" x2="47" y2="50" stroke="#1FB6C1" strokeWidth="1" className="connection connection-4" />
-              <line x1="33" y1="50" x2="40" y2="60" stroke="#1FB6C1" strokeWidth="1" className="connection connection-5" />
-              <line x1="47" y1="50" x2="40" y2="60" stroke="#1FB6C1" strokeWidth="1" className="connection connection-6" />
-            </g>
-          </svg>
+          <img 
+            src="/neuroqor-logo.svg" 
+            alt="NeuroQor Logo" 
+            className="w-24 h-24 md:w-32 md:h-32 object-contain logo-fade"
+          />
         </div>
 
         {/* Company Name */}
@@ -106,68 +76,27 @@ export default function LoadingScreen() {
 
       <style jsx>{`
         @media (prefers-reduced-motion: reduce) {
-          .shield-path,
-          .node,
-          .connection,
+          .logo-fade,
           .company-name,
           .loading-bar {
             animation: none !important;
             opacity: 1 !important;
-            stroke-dashoffset: 0 !important;
           }
         }
 
-        .shield-path {
-          stroke-dasharray: 200;
-          stroke-dashoffset: 200;
-          animation: drawShield 1s ease-out 0.2s forwards;
-        }
-
-        @keyframes drawShield {
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
-
-        .node {
+        .logo-fade {
           opacity: 0;
-          transform-origin: center;
+          animation: fadeInScale 0.6s ease-out 0.3s forwards;
         }
 
-        .node-1 { animation: fadeInNode 0.3s ease-out 0.5s forwards; }
-        .node-2 { animation: fadeInNode 0.3s ease-out 0.6s forwards; }
-        .node-3 { animation: fadeInNode 0.3s ease-out 0.7s forwards; }
-        .node-4 { animation: fadeInNode 0.3s ease-out 0.8s forwards; }
-        .node-5 { animation: fadeInNode 0.3s ease-out 0.9s forwards; }
-        .node-6 { animation: fadeInNode 0.3s ease-out 1s forwards; }
-
-        @keyframes fadeInNode {
+        @keyframes fadeInScale {
           from {
             opacity: 0;
-            transform: scale(0);
+            transform: scale(0.9);
           }
           to {
             opacity: 1;
             transform: scale(1);
-          }
-        }
-
-        .connection {
-          stroke-dasharray: 20;
-          stroke-dashoffset: 20;
-          opacity: 0.6;
-        }
-
-        .connection-1 { animation: drawLine 0.2s ease-out 0.7s forwards; }
-        .connection-2 { animation: drawLine 0.2s ease-out 0.8s forwards; }
-        .connection-3 { animation: drawLine 0.2s ease-out 0.9s forwards; }
-        .connection-4 { animation: drawLine 0.2s ease-out 1s forwards; }
-        .connection-5 { animation: drawLine 0.2s ease-out 1.1s forwards; }
-        .connection-6 { animation: drawLine 0.2s ease-out 1.2s forwards; }
-
-        @keyframes drawLine {
-          to {
-            stroke-dashoffset: 0;
           }
         }
 
