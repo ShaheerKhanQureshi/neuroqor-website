@@ -42,16 +42,19 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className={cn(
-              "transition-all duration-300 flex-shrink-0",
-              scrolled ? "w-12 h-12" : "w-14 h-14"
-            )}>
-              <img 
-                src="/neuroqor-logo.svg" 
-                alt="NeuroQor" 
-                className="w-full h-full object-contain"
-              />
-            </div>
+         <div
+  className={cn(
+    "transition-all duration-300 flex-shrink-0",
+    scrolled ? "h-10 md:h-12" : "h-12 md:h-14"
+  )}
+>
+  <img
+    src="/neuroqor-logo.svg"
+    alt="NeuroQor"
+    className="h-full w-auto object-contain"
+  />
+</div>
+
           </Link>
 
           {/* Desktop Navigation */}
